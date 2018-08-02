@@ -6,17 +6,45 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
+
 setInterval(
 function(){ 
 changeBackground(); 
 }, 1);
+var pass = '';
+$('#apostrophe').click(function(){
+	console.log(pass);
+	if(pass.substring(pass.length - 3) == 'brs'){
+	window.location.href = 'hidden.html';
+	}
+	
+});
+$('#b').click(function(){
+	pass += 'b'
+	console.log('b');
+});
+$('#r').click(function(){
+	pass += 'r'
+	console.log('r');
+});
+$('#s').click(function(){
+	pass += 's'
+	console.log('s');
+});
+
+
+
 })
+
+
 function changeBackground() {
      var red = Math.floor(Math.random() * 255);
      var green = Math.floor(Math.random() * 255);
      var blue = Math.floor(Math.random() * 255);
      $('#particles-js').css('background-color', 'rgb(' + red + ',' + green + ',' + blue + ')');
 }
+
+
 </script>
 </head>
 
@@ -27,7 +55,7 @@ function changeBackground() {
 <embed src="Music/good_enough.mp3" width="180" height="90" loop="false" autostart="true" hidden="true" />
 <div id = 'in-site-links'></div>
 <div id = 'name'></div>
-<div id = 'info'>Fuckers in school telling me, always in the barber shop Chief Keef ain’t bout this, Chief Keef ain’t bout that My boy a BD on fucking Lamron and them He, he they say that nigga don’t be putting in no work SHUT THE FUCK UP! Y'all niggas ain’t know shit All ya motherfuckers talk about Chief Keef ain’t no hitta Chief Keef ain’t this Chief Keef a fake SHUT THE FUCK UP Y'all don’t live with that nigga Y'all know that nigga got caught with a ratchet Shootin' at the police and shit Nigga been on probation since fuckin, I don’t know when! Motherfuckers stop fuckin' playin' him like that Them niggas savages out there If I catch another motherfucker talking sweet about Chief Keef I’m fucking beating they ass! I’m not fucking playing no more You know those niggas role with Lil' Reese and them.</div>
+<div id = 'info'>Fuckers in school telling me, always in the <span id = 'b'>b</span>arber shop Chief Keef ain’t bout this, Chief Keef ain’t bout that My boy a BD on fucking Lamron and them He, he they say that nigga don’t be putting in no work SHUT THE FUCK UP! Y'all niggas ain’t know shit All ya motherfuckers talk about Chief Keef ain’t no hitta Chief Keef ain’t this Chief Keef a fake SHUT THE FUCK UP Y'all don’t live with that nigga Y'all know that nigga got caught with a <span id = 'r'>r</span>atchet Shootin' at the police and shit Nigga been on probation since fuckin, I don’t know when! Motherfuckers stop fuckin' playin' him like that Them niggas savages out there If I catch another motherfucker talking <span id = 's'>s</span>weet about Chief Keef I’m fucking beating they ass! I’m not fucking playing no more You know those niggas role with Lil<span id = 'apostrophe'>'</span> Reese and them.</div>
 <div id = 'external-links'></div>
 </div>
 
